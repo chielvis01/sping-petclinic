@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("raj80dockerid/test")
+       app = docker.build("chielvis1/spring-petclinic")
     }
 
     stage('Test image') {
