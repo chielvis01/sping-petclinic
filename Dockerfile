@@ -1,7 +1,6 @@
-FROM maven:3.5.2-jdk-8-alpine
+FROM openjdk:8-jdk
 
-COPY spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar /
+COPY ./spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar /opt/spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar
 
 EXPOSE 8080
-
-ENTRYPOINT ["java","-Xmx4g","-jar","spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/opt/spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar"]
